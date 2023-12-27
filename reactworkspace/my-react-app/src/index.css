@@ -6,3 +6,23 @@
   background-color: blueviolet;
   padding: 25px;
 }
+
+.second {
+  color: blue;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  background-color: black;
+  padding: 25px;
+  margin: 10px;
+}
+
+.third {
+  color:red;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  background-color: black;
+  padding: 25px;
+  margin: 10px;
+}

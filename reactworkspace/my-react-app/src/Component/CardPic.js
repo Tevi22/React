@@ -1,22 +1,30 @@
 import React from 'react';
+import CardData from './CardData';
 
 const CardPic = () => {
+
     return (
+        <>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-3">
-                        <div class="card">
-                            <img src="..." class="card-img-top" alt="..."></img>
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <button href="#" class="btn btn-primary">Go somewhere</button>
+                    {CardData.map((card, index) => (
+                        <div className="col-lg-3" key={index}>
+                            <div className="card">
+                                <img src={card.imgSr} className="card-img-top" alt="..."></img>
+                                <div className="card-body">
+                                    <h5 className="card-title">{card.title}</h5>
+                                    <p className="card-text">{card.data}</p>
+                                    <button onClick={card.btnLink} className="btn btn-primary">{card.btn}</button>
                                 </div>
+                            </div>
                         </div>
-                    </div>
+                    ))}
                 </div>
             </div>
+        </>
     )
+
+
 }
 
 export default CardPic;
